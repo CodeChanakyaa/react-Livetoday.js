@@ -29,7 +29,7 @@ export default class Newspage extends Component {
     }
 
     // async updateNews(pageNo) {
-    //     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=$ 43cdedb11af9480bad3757994bc8f21d&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    //     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=$specific_api_key&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     //     this.setState({ loading: true });
     //     let data = await fetch(url);
     //     let parsedData = await data.json();
@@ -41,7 +41,7 @@ export default class Newspage extends Component {
     // }
 
     async componentDidMount() {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=43cdedb11af9480bad3757994bc8f21d&page=1&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=specific_api_key&page=1&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true });
         let data = await fetch(url);
         let parsedData = await data.json();
@@ -53,7 +53,7 @@ export default class Newspage extends Component {
     }
 
     handleNextClick = async () => {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=43cdedb11af9480bad3757994bc8f21d&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=specific_api_key&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true });
         let data = await fetch(url);
         let parsedData = await data.json();
@@ -65,7 +65,7 @@ export default class Newspage extends Component {
     }
 
     handlePrevClick = async () => {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=43cdedb11af9480bad3757994bc8f21d&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=specific_api_key&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true });
         let data = await fetch(url);
         let parsedData = await data.json();
