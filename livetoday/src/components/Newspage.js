@@ -3,7 +3,7 @@ import Load from './Load';
 import Newsitem from "./Newsitem";
 import PropTypes from 'prop-types';
 
-const API_KEY = "43cdedb11af9480bad3757994bc8f21d"
+const API_KEY = ""
 
 export default class Newspage extends Component {
     static defaultProps = {
